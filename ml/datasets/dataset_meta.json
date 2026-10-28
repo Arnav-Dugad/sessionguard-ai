@@ -1,0 +1,58 @@
+{
+  "dataset_version": "sg-synthetic-v1",
+  "seed": 42,
+  "sessions": 1400,
+  "rows": 19338,
+  "generated_at": "2026-10-28T15:41:31Z",
+  "features": [
+    "session_age_min",
+    "log_gap_s",
+    "rate_10s",
+    "rate_60s",
+    "ua_mismatch",
+    "device_change_score",
+    "automation_ua",
+    "subnet_change",
+    "region_change",
+    "distinct_contexts_5m",
+    "context_switches_5m",
+    "failed_auth_15m",
+    "authz_failures_5m",
+    "sensitive_count_5m",
+    "sensitive_ratio_5m",
+    "seq_anomaly",
+    "admin_probe",
+    "token_exchange_ms",
+    "relay_indicator",
+    "cookie_misuse"
+  ],
+  "scenarios": {
+    "normal": 0,
+    "benign_device_change": 0,
+    "benign_network_change": 0,
+    "benign_power_user": 0,
+    "token_replay": 1,
+    "device_anomaly": 1,
+    "network_anomaly": 1,
+    "request_burst": 1,
+    "bitm_relay": 1
+  },
+  "sessions_per_scenario": {
+    "normal": 389,
+    "benign_device_change": 123,
+    "benign_network_change": 111,
+    "benign_power_user": 152,
+    "token_replay": 161,
+    "device_anomaly": 102,
+    "network_anomaly": 124,
+    "request_burst": 131,
+    "bitm_relay": 107
+  },
+  "positive_row_rate": 0.3025,
+  "class_distribution": {
+    "row_positive": 5849,
+    "row_negative": 13489,
+    "session_positive": 625,
+    "session_negative": 775
+  }
+}

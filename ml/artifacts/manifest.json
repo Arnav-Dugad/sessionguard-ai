@@ -1,0 +1,57 @@
+{
+  "dataset_version": "sg-synthetic-v1",
+  "seed": 42,
+  "trained_at": "2026-10-28T15:42:55Z",
+  "train_seconds": 4.37,
+  "features": [
+    "session_age_min",
+    "log_gap_s",
+    "rate_10s",
+    "rate_60s",
+    "ua_mismatch",
+    "device_change_score",
+    "automation_ua",
+    "subnet_change",
+    "region_change",
+    "distinct_contexts_5m",
+    "context_switches_5m",
+    "failed_auth_15m",
+    "authz_failures_5m",
+    "sensitive_count_5m",
+    "sensitive_ratio_5m",
+    "seq_anomaly",
+    "admin_probe",
+    "token_exchange_ms",
+    "relay_indicator",
+    "cookie_misuse"
+  ],
+  "models": [
+    "rules",
+    "logreg",
+    "xgboost",
+    "aexgb"
+  ],
+  "class_distribution": {
+    "row_positive": 5849,
+    "row_negative": 13489,
+    "session_positive": 625,
+    "session_negative": 775
+  },
+  "scenarios": [
+    "normal",
+    "benign_device_change",
+    "benign_network_change",
+    "benign_power_user",
+    "token_replay",
+    "device_anomaly",
+    "network_anomaly",
+    "request_burst",
+    "bitm_relay"
+  ],
+  "splits": {
+    "train_sessions": 980,
+    "val_sessions": 210,
+    "test_sessions": 210,
+    "method": "GroupShuffleSplit by session_id (70/15/15)"
+  }
+}
