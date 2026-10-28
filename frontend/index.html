@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>SessionGuard AI — Security Operations</title>
+    <meta name="description" content="Intelligent session-hijacking detection, behavioral authentication and automated Zero-Trust containment." />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Apply the stored theme before first paint to avoid a flash.
+      try {
+        var t = localStorage.getItem("sg-theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+        else if (t === "system") document.documentElement.removeAttribute("data-theme");
+      } catch (e) {}
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
